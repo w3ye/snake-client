@@ -8,7 +8,8 @@ const connect = () => {
 
   conn.setEncoding('utf8');
   conn.on('connect', () => {
-    console.log("connected");
+    console.log("Connected - Successful");
+    conn.write("Name: REE");
   });
   conn.on('data', (data) => {
     console.log(data);
